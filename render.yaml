@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: ai-resume-analyzer-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+
+  - type: web
+    name: ai-resume-analyzer
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: ai-resume-analyzer-api
+          envVarKey: RENDER_EXTERNAL_URL
