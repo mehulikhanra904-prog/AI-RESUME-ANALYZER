@@ -4,12 +4,20 @@
 
 Resume Match AI is a web application for analyzing a resume against a target job description. Upload a resume, paste the role details, and review a match overview, matched and missing skills, and a skill gap summary.
 
+## 🌐 Live demo
+
+- **Frontend:** [Open Resume Match AI](https://ai-resume-analyzer-ten-orpin.vercel.app/)
+- **Analysis API:** [Render API](https://ai-resume-analyzer-api-n9aw.onrender.com/)
+
+The React frontend is deployed on Vercel and sends resume-analysis requests to the FastAPI backend hosted on Render.
+
 <!-- Add a screenshot here when one is available:
 ![Resume Match AI dashboard](docs/screenshots/dashboard.png)
 -->
 
 ## Contents
 
+- [Live demo](#-live-demo)
 - [What it does](#-what-it-does)
 - [How to use it](#-how-to-use-it)
 - [Technology](#-technology)
