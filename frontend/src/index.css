@@ -1,24 +1,15 @@
-@import url(
-  "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-);
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 
-
-html {
+html, body, #root {
   min-width: 320px;
-
-  background: #f6f7f9;
-}
-
-
-body {
-  min-width: 320px;
-}
-html,
-body,
-#root {
   min-height: 100%;
 }
 
-body {
-  margin: 0;
+html { scroll-behavior: smooth; }
+
+body { margin: 0; }
+
+::selection {
+  color: #fff;
+  background: #7657ff;
 }
